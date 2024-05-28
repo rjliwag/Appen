@@ -72,18 +72,36 @@
                 title: "Oops...",
                 text: "Username and Password are required!",
             });
-        }else{
+        } else {
             $.ajax({
                 url: "admin-login.php",
                 type: "POST",
                 data: {
-                    username:username,
-                    password:password
+                    username: username,
+                    password: password
+                },
+                dataType: 'json',
+                success: function (response) {
+                    if (response.status == 'success') {
+                        window.location.href = response.redirect;
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: response.message,
+                        });
+                    }
+                },
+                error: function (xhr, status, error) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Something went wrong!",
+                    });
                 }
-
-            })
+            });
         }
-    })
+    });
 </script>
 
 </html>
