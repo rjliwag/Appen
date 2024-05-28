@@ -1,11 +1,10 @@
 
-
 <div class="sidebar bg-dark flex-column d-flex">
 
     <div class="px-4 pt-5 row">
         <div class="col-4"><img src="assets/img/admin.png" height="50" width="50" alt=""></div>
         <div class="col-8">
-            <p class="text-light">R.J. Liwag <br /><small class="text-secondary">administrator</small></p>
+            <p class="text-light"> <?php echo $admin_username; ?> <br /><small class="text-secondary">administrator</small></p>
         </div>
     </div>
     <hr style="color: white;">

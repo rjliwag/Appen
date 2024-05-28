@@ -11,6 +11,7 @@ body {
     grid-column: 2/3;
     grid-row: 1/2;
 }
+
 /* sidebar */
 .sidebar {
     grid-column: 1/2;
@@ -24,7 +25,7 @@ body {
 .sidebar ul li a:hover {
     background-color: brown;
     color: white;
-    
+
 }
 
 
@@ -34,10 +35,10 @@ body {
 .main-content {
     grid-column: 2/3;
     grid-row: 2/3;
-    
+
 }
 
-.card-dashboard{
+.card-dashboard {
     width: 250px;
     height: 100px;
 }
@@ -46,6 +47,26 @@ body {
 .dataTables_wrapper .dataTables_filter input {
     margin-bottom: 10px;
 }
-table.dataTable{
+
+table.dataTable {
     width: 100% !important;
+}
+
+/* login form */
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
 }
