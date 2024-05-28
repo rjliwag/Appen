@@ -1,4 +1,5 @@
-<?php include 'assets/libraries/custom-links.php';?>
+<?php include 'assets/libraries/custom-links.php';
+require 'conn.php';?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark header">
   <div class="container-fluid">
